@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cahier des charges – Gestion des projets et stages de fin d’étude</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #b00020, #e53935);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+    main {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px 40px;
+    }
+    section {
+      background: white;
+      margin-bottom: 25px;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+    section h2 {
+      margin-top: 0;
+      color: #b00020;
+      font-size: 1.5rem;
+      border-left: 5px solid #e53935;
+      padding-left: 12px;
+    }
+    section h3 {
+      color: #444;
+      margin-top: 20px;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .box {
+      background: #fafafa;
+      border-left: 4px solid #e53935;
+      padding: 15px 18px;
+      margin: 15px 0;
+      border-radius: 6px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Cahier des charges</h1>
+  <p>Système de gestion des projets et stages de fin d’étude (Étudiants BTS)</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>1. Contexte général du projet</h2>
+    <p>
+      Dans le cadre de la formation BTS, les étudiants sont amenés à réaliser des projets et des stages de fin d’étude.
+      Actuellement, le suivi de ces travaux se fait de manière non centralisée (documents papier, échanges informels, fichiers séparés),
+      ce qui rend la gestion difficile pour les encadrants et l’administration.
+    </p>
+    <p>
+      Ce projet vise à concevoir une application simple et efficace permettant de centraliser toutes les informations
+      relatives aux projets et stages, et de garder une trace claire de l’avancement des travaux réalisés par les étudiants.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Analyse du sujet</h2>
+    <p>
+      L’analyse du sujet a été réalisée en étudiant les besoins réels d’un établissement de formation BTS.
+      Nous avons identifié les principaux problèmes suivants :
+    </p>
+    <ul>
+      <li>Absence de suivi clair de l’avancement des projets et stages</li>
+      <li>Difficulté pour les encadrants de superviser plusieurs étudiants</li>
+      <li>Manque de statistiques globales sur les projets et stages</li>
+      <li>Pas de plateforme unique pour stocker les rapports et remarques</li>
+    </ul>
+    <div class="box">
+      <strong>Conclusion de l’analyse :</strong> il est nécessaire de mettre en place un système informatisé centralisé
+      permettant une meilleure organisation, un suivi efficace et une traçabilité complète des travaux.
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Objectifs du projet</h2>
+    <ul>
+      <li>Gérer les étudiants BTS</li>
+      <li>Gérer les projets et les stages de fin d’étude</li>
+      <li>Permettre le suivi de l’avancement des travaux</li>
+      <li>Faciliter le travail des encadrants</li>
+      <li>Générer des rapports et des statistiques</li>
+      <li>                                                                         b  n              b      c        mmmmm                vbvvvvvvvv           ,     v                   
+        Mettre en valeur les anciens projets et stages via  e b     ,       vc v  fvvvbliot  v vb        ,mmmm              bbbbbbbbbbbbb nnnnnnnnnnnnnnn                 n         b                                 bn         bbb                     b  x                                  c x   ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc                                                                                    hèque pédagogique
+      </li>
+      <li>Permettre aux visiteurs (nouveaux étudiants) de naviguer librement dans la bibliothèque des projets et stages</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Intégration de la bibliothèque des projets et stages (espace visiteur)</h2>
+    <p>
+      Dans le cadre de l’analyse du sujet, nous avons jugé nécessaire d’intégrer une bibliothèque numérique des projets
+      et stages de fin d’étude. Cette bibliothèque représente un espace public accessible aux visiteurs,
+      notamment aux nouveaux étudiants BTS.
+    </p>
+    <p>
+      L’objectif de cette bibliothèque est pédagogique et informatif. Elle permet de conserver et de valoriser
+      les anciens travaux réalisés par les étudiants, tout en offrant une source d’information fiable
+      pour les promotions futures.
+    </p>
+
+    <div class="box">
+      <strong>Pourquoi avoir ajouté cette bibliothèque ?</strong>
+      <ul>
+        <li>Aider les nouveaux étudiants à choisir un projet de fin d’étude</li>
+        <li>Donner une idée réelle et concrète des stages possibles</li>
+        <li>Valoriser les anciens travaux et les efforts des étudiants</li>
+        <li>Améliorer l’orientation et la préparation des étudiants</li>
+      </ul>
+    </div>
+
+    <p>
+      Les données affichées dans cette bibliothèque sont strictement limitées aux projets, stages et rapports
+      validés par l’administration, garantissant ainsi la qualité et la fiabilité des informations publiées.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Démarche de travail et méthode adoptée</h2>
+    <p>
+      Pour commencer le projet, nous avons adopté une démarche structurée basée sur les étapes suivantes :
+    </p>
+    <ul>
+      <li>Compréhension du sujet et du contexte pédagogique</li>
+      <li>Identification des acteurs du système</li>
+      <li>Définition des fonctionnalités principales</li>
+      <li>Analyse des interactions entre les acteurs et le système</li>
+      <li>Conception logique de la base de données</li>
+    </ul>
+    <div class="box">
+      Actuellement, le projet se situe dans la phase d’analyse et de conception fonctionnelle.
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Identification synthétique des acteurs</h2>
+    <p>
+      Afin d’éviter toute redondance avec les cas d’utilisation (Use Cases), cette partie présente uniquement
+      une vision synthétique des acteurs du système. Les interactions détaillées sont décrites dans la section suivante.
+    </p>
+
+    <div class="box">
+      <ul>
+        <li><strong>Visiteur</strong> : consulte la bibliothèque publique des projets et stages validés</li>
+        <li><strong>Étudiant</strong> : réalise un projet ou un stage et met à jour son avancement</li>
+        <li><strong>Encadrant</strong> : supervise, valide et accompagne les étudiants</li>
+        <li><strong>Administrateur</strong> : gère le système, les utilisateurs et la publication des données</li>
+      </ul>
+    </div>
+
+    <p>
+      Cette identification permet de définir clairement les responsabilités de chaque acteur
+      sans entrer dans les détails fonctionnels, qui seront abordés à travers les Use Cases.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Modélisation UML – Diagramme de cas d’utilisation</h2>
+    <p>
+      Le diagramme de cas d’utilisation (Use Case Diagram) permet de représenter graphiquement
+      les interactions entre les acteurs et le système. Il constitue une étape clé de la conception UML.
+    </p>
+
+    <h3>Acteur : Visiteur</h3>
+    <ul>
+      <li>Consulter la bibliothèque des projets</li>
+      <li>Consulter les rapports validés</li>
+      <li>Rechercher par filière, année ou entreprise</li>
+      <li>Consulter la localisation des stages</li>
+    </ul>
+
+    <h3>Acteur : Étudiant</h3>
+    <ul>
+      <li>S’authentifier</li>
+      <li>Consulter son projet ou stage</li>
+      <li>Mettre à jour l’avancement</li>
+      <li>Déposer un rapport</li>
+    </ul>
+
+    <h3>Acteur : Encadrant</h3>
+    <ul>
+      <li>Consulter les étudiants encadrés</li>
+      <li>Suivre et valider l’avancement</li>
+      <li>Ajouter des remarques</li>
+      <li>Générer des rapports de suivi</li>
+    </ul>
+
+    <h3>Acteur : Administrateur</h3>
+    <ul>
+      <li>Gérer les utilisateurs</li>
+      <li>Créer et affecter les projets et stages</li>
+      <li>Valider la publication dans la bibliothèque</li>
+      <li>Consulter les statistiques globales</li>
+    </ul>
+
+    <div class="box">
+      Cette modélisation UML permet de visualiser clairement le périmètre fonctionnel du système
+      et les responsabilités de chaque acteur.
+    </div>
+  </section>
+
+  <section>
+    <h2>7. Modélisation de la base de données (description détaillée)</h2>
+    <p>
+      Cette section présente la structure conceptuelle de la base de données du système.
+      Chaque table est décrite avec ses attributs, son objectif et un exemple concret afin de garantir
+      une compréhension claire du fonctionnement global.
+    </p>
+
+    <h3>7.1 Table UTILISATEUR</h3>
+    <p><strong>Objectif :</strong> stocker tous les utilisateurs du système (étudiants, encadrants, administrateurs).</p>
+    <ul>
+      <li><strong>id_utilisateur</strong> : identifiant unique de l’utilisateur</li>
+      <li><strong>nom</strong> : nom complet de l’utilisateur</li>
+      <li><strong>email</strong> : adresse email</li>
+      <li><strong>mot_de_passe</strong> : mot de passe sécurisé</li>
+      <li><strong>role</strong> : rôle de l’utilisateur (étudiant, encadrant, administrateur)</li>
+    </ul>
+    <div class="box">
+      Exemple : un utilisateur avec le rôle « étudiant » peut mettre à jour l’avancement de son projet.
+    </div>
+
+    <h3>7.2 Table PROJET</h3>
+    <p><strong>Objectif :</strong> stocker les informations des projets de fin d’étude.</p>
+    <ul>
+      <li><strong>id_projet</strong> : identifiant du projet</li>
+      <li><strong>titre</strong> : titre du projet</li>
+      <li><strong>description</strong> : description générale</li>
+      <li><strong>filiere</strong> : filière concernée</li>
+      <li><strong>annee</strong> : année universitaire</li>
+      <li><strong>etat</strong> : état du projet (en cours, terminé)</li>
+      <li><strong>visibilite</strong> : visibilité du projet (public / privé)</li>
+    </ul>
+    <div class="box">
+      Exemple : un projet terminé et validé peut être affiché dans la bibliothèque publique.
+    </div>
+
+    <h3>7.3 Table STAGE</h3>
+    <p><strong>Objectif :</strong> gérer les informations relatives aux stages de fin d’étude.</p>
+    <ul>
+      <li><strong>id_stage</strong> : identifiant du stage</li>
+      <li><strong>entreprise</strong> : nom de l’entreprise</li>
+      <li><strong>ville</strong> : localisation du stage</li>
+      <li><strong>duree</strong> : durée du stage</li>
+      <li><strong>annee</strong> : année du stage</li>
+      <li><strong>visibilite</strong> : visibilité du stage (public / privé)</li>
+    </ul>
+    <div class="box">
+      Exemple : un nouveau étudiant peut consulter les entreprises ayant accueilli des stagiaires auparavant.
+    </div>
+
+    <h3>7.4 Table RAPPORT</h3>
+    <p><strong>Objectif :</strong> stocker les rapports déposés par les étudiants.</p>
+    <ul>
+      <li><strong>id_rapport</strong> : identifiant du rapport</li>
+      <li><strong>titre</strong> : titre du rapport</li>
+      <li><strong>type</strong> : type (rapport de projet ou de stage)</li>
+      <li><strong>date_depot</strong> : date de dépôt</li>
+      <li><strong>statut</strong> : statut de validation (validé / non validé)</li>
+    </ul>
+    <div class="box">
+      Exemple : seuls les rapports validés sont accessibles aux visiteurs.
+    </div>
+
+    <h3>7.5 Table SUIVI (table centrale)</h3>
+    <p><strong>Objectif :</strong> assurer le suivi détaillé et historique de l’avancement des projets et stages.</p>
+    <ul>
+      <li><strong>id_suivi</strong> : identifiant du suivi</li>
+      <li><strong>id_etudiant</strong> : référence à l’étudiant concerné</li>
+      <li><strong>id_projet_stage</strong> : référence au projet ou au stage</li>
+      <li><strong>pourcentage_avancement</strong> : taux d’avancement (0 à 100%)</li>
+      <li><strong>description_travaux</strong> : travaux réalisés lors de cette étape</li>
+      <li><strong>date_suivi</strong> : date de la mise à jour</li>
+      <li><strong>commentaire_encadrant</strong> : remarque de l’encadrant</li>
+      <li><strong>statut_validation</strong> : validation de l’étape (validé / non validé)</li>
+    </ul>
+    <div class="box">
+      Exemple concret : un étudiant met à jour son avancement à 40% avec la description des tâches réalisées.
+      Cette information est conservée et visible par l’encadrant.
+    </div>
+  </section>
+
+  <section>
+    <h2>8. Conclusion</h2>
+    <p>
+      Ce cahier des charges présente l’analyse fonctionnelle du projet de gestion des projets et stages de fin d’étude.
+      Il constitue une base solide pour la phase suivante, qui sera la conception technique puis le développement
+      de l’application.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  Projet de fin d’étude – BTS | Cahier des charges
+</footer>
+
+</body>
+</html>

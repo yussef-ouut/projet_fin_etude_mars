@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahier des Charges & État d'Avancement V2 (Détaillé)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #ef4444;
+            --bg: #fdfdfd;
+            --text: #1e293b;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --code-bg: #111827;
+            --code-text: #f3f4f6;
+            --highlight: #fef9c3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, var(--primary), #1e40af);
+            border-radius: 30px;
+            color: white;
+            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .status-header {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: 24px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            border-left: 6px solid var(--accent);
+            padding-left: 20px;
+            line-height: 1.2;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--primary-light);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .alert-box {
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 5px solid;
+        }
+
+        .alert-problem {
+            background-color: #fff1f2;
+            border-color: #f43f5e;
+            color: #9f1239;
+        }
+
+        .alert-info {
+            background-color: #eff6ff;
+            border-color: #3b82f6;
+            color: #1e40af;
+        }
+
+        .database-grid {
+            margin: 30px 0;
+            display: grid;
+            gap: 20px;
+        }
+
+        .db-table-info {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .db-table-info strong {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        pre {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 20px;
+            border-radius: 12px;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 0.85rem;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th {
+            background: #f1f5f9;
+            text-align: left;
+            padding: 15px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tech-tag {
+            background: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .expert-tip {
+            background: #fefce8;
+            border: 1px dashed #ca8a04;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .warning-text {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Cahier des Charges & État d'Avancement</h1>
+            <p>Système PFE Hub – Gestion Intégrée des Stages et Projets BTS</p>
+            <div class="status-header">Phase 2 : Développement du Noyau Technique | Février 2026</div>
+        </header>
+
+        <!-- 1. ANALYSE ET PROBLEMATIQUES -->
+        <section>
+            <h2>1. Analyse Approfondie et Problématiques Rencontrées</h2>
+            <p>Le début de ce projet nous a permis de confronter nos idées théoriques aux réalités techniques du
+                développement Full-Stack. Contrairement à une application simple, la gestion des PFE nécessite une
+                synchronisation parfaite entre les différents acteurs.</p>
+
+            <div class="alert-box alert-problem">
+                <h3>A. Le défi de l'Asynchronisme (React ↔ PHP)</h3>
+                <p>Dans notre architecture moderne, le frontend (React) ne recharge jamais la page. Cela pose une
+                    problématique majeure pour l'interaction avec le backend (scripts PHP). Chaque action de l'étudiant
+                    doit être traitée via des requêtes API asynchrones (Fetch/JSON). Nous avons dû apprendre à gérer les
+                    états de chargement et les erreurs PHP de manière invisible pour l'utilisateur.</p>
+            </div>
+
+            <div class="alert-box alert-info">
+                <h3>B. Interaction avec les Scripts de l'Espace Étudiant</h3>
+                <p>Lorsqu'un étudiant dépose un projet, le script PHP doit non seulement enregistrer les textes, mais
+                    aussi valider les fichiers et lier l'ID de l'étudiant de manière sécurisée. La problématique ici est
+                    la <strong>gestion des permissions</strong> : s'assurer qu'un étudiant ne peut interagir qu'avec ses
+                    propres données via les scripts de traitement.</p>
+            </div>
+
+            <div class="alert-box alert-problem" style="background-color: #fff7ed; border-color: #f97316;">
+                <h3>C. Suivi et Espace Professeur</h3>
+                <p>La complexité de l'espace professeur réside dans l'interaction directe avec l'avancement. Le script
+                    doit permettre au professeur de "surveiller" l'état (`suivis`) et d'injecter des remarques qui
+                    seront immédiatement visibles sur le dashboard de l'étudiant. Cela demande une structure de base de
+                    données très réactive.</p>
+            </div>
+
+            <div class="expert-tip">
+                <strong>Conseil Pédagogique :</strong> Monsieur, nous pensons que la gestion des retours d'erreurs en
+                format JSON est plus propre que d'afficher des erreurs PHP brutales. Cela permet au site de rester actif
+                même si le serveur rencontre un problème temporaire. Qu'en pensez-vous pour la robustesse du projet ?
+            </div>
+        </section>
+
+        <!-- 2. REALISATION TECHNIQUE ET BASE DE DONNEES -->
+        <section>
+            <h2>2. Réalisation Technique et Architecture des Données</h2>
+            <p class="warning-text">Il est important de noter que le projet est actuellement au DÉBUT de sa phase de
+                réalisation. Nous avons terminé la fondation, mais les fonctionnalités complexes d'administration et de
+                validation finale restent à implémenter.</p>
+
+            <h3>État d'Avancement par Module :</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Composant</th>
+                        <th>Détails de ce qui est fait</th>
+                        <th>Progression</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Fondation BDD</strong></td>
+                        <td>Toutes les tables sont créées et indexées sous XAMPP.</td>
+                        <td><span class="tech-tag" style="background:#dcfce7; color:#166534;">100%</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Espace Étudiant</strong></td>
+                        <td>Structure de dépôt et affichage du dashboard personnel.</td>
+                        <td><span class="tech-tag" style="background:#fef9c3; color:#854d0e;">60%</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Moteur de Recherche</strong></td>
+                        <td>Filtrage dynamique des projets dans la bibliothèque.</td>
+                        <td><span class="tech-tag" style="background:#dcfce7; color:#166534;">90%</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Espace Professeur</strong></td>
+                        <td>Lecture des étudiants encadrés commencée.</td>
+                        <td><span class="tech-tag" style="background:#fee2e2; color:#991b1b;">30%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Schéma Complet de la Base de Données (5 Tables) :</h3>
+            <p>Nous avons conçu un schéma relationnel de 5 tables principales déjà opérationnelles :</p>
+
+            <div class="database-grid">
+                <div class="db-table-info">
+                    <strong>1. Table `utilisateurs`</strong> : Gère l'authentification et les rôles (étudiant,
+                    encadrant, admin).
+                </div>
+                <div class="db-table-info">
+                    <strong>2. Table `projets`</strong> : Contient les titres, descriptions, filières et liens avec
+                    l'étudiant.
+                </div>
+                <div class="db-table-info">
+                    <strong>3. Table `stages`</strong> : Spécifiquement pour les infos entreprises, villes et durées.
+                </div>
+                <div class="db-table-info">
+                    <strong>4. Table `rapports`</strong> : Trace tous les dépôts de documents (titre du PDF, date,
+                    statut).
+                </div>
+                <div class="db-table-info">
+                    <strong>5. Table `suivis`</strong> : La table centrale d'interaction où le prof note l'avancement
+                    (0-100%).
+                </div>
+            </div>
+
+            <h3>Exemple de Structure SQL (Table Utilisateur) :</h3>
+            <pre>
+CREATE TABLE utilisateurs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    mot_de_passe VARCHAR(255) NOT NULL,
+    role ENUM('etudiant', 'encadrant', 'administrateur') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</pre>
+
+            <h3>Vérification des Données (Données Réelles en Base) :</h3>
+            <p>L'exemple suivant confirme que le pont entre l'interface et la base de données est 100% fonctionnel :</p>
+            <div class="alert-box alert-info" style="background-color: #f1f5f9; border-color: #64748b;">
+                <strong>Donnée de Test identifiée :</strong><br>
+                Utilisateur ID: 1 | Nom: <strong>youssef aotari</strong> | Rôle: Étudiant<br>
+                <p style="margin-top:10px; font-size: 0.9rem;">Ce compte étudiant est déjà capable de se connecter et
+                    d'initier un projet via nos scripts PHP de traitement.</p>
+            </div>
+        </section>
+
+        <!-- 3. PLANIFICATION ET ROADMAP -->
+        <section>
+            <h2>3. Planification des Prochaines Étapes</h2>
+            <p>Le projet n'en est qu'à ses débuts opérationnels. Voici notre plan d'action pour les prochaines semaines
+                pour faire évoluer cet état d'avancement :</p>
+
+            <div class="db-table-info">
+                <strong>Phase Immédiate : Finalisation du Suivi Professeur</strong>
+                <p>Nous allons lier l'interface du dashboard professeur au script PHP de mise à jour de la table
+                    `suivis`. Cela permettra de donner des "feedbacks" en temps réel aux étudiants.</p>
+            </div>
+
+            <div class="db-table-info" style="margin-top:20px;">
+                <strong>Phase Secondaire : Module Administration</strong>
+                <p>Création des scripts PHP pour l'administrateur afin de valider ou refuser les publications dans la
+                    bibliothèque publique. C'est le dernier verrou de sécurité du projet.</p>
+            </div>
+
+            <div class="expert-tip">
+                <strong>Astuce pour la Suite :</strong> Pour optimiser le serveur, nous prévoyons d'utiliser des
+                recherches "Full-Text" en SQL pour la bibliothèque afin que les futurs étudiants trouvent plus
+                rapidement les projets par mots-clés.
+            </div>
+        </section>
+
+        <!-- 4. CONCLUSION -->
+        <section>
+            <h2>4. Conclusion Générale</h2>
+            <p>En conclusion, ce deuxième état d'avancement montre un projet dont les fondements techniques sont
+                robustes et validés. Si le site n'est pas encore "clés en main", la communication entre le Frontend, le
+                PHP et la base MySQL est une réussite totale. Les prochaines étapes transformeront ce moteur technique
+                en une plateforme de gestion complète et intuitive pour les étudiants du BTS.</p>
+        </section>
+
+        <footer>
+            Document de suivi de projet PFE Hub &copy; 2026 | Rapport Technique BTS
+        </footer>
+    </div>
+
+</body>
+
+</html>

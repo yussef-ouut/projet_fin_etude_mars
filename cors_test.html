@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS Test</title>
+</head>
+<body>
+    <h1>API Connection Test</h1>
+    <button onclick="testApi()">Test Connection</button>
+    <div id="output"></div>
+
+    <script>
+        async function testApi() {
+            const output = document.getElementById('output');
+            output.innerHTML = 'Testing...';
+            
+            try {
+                // Try to hit the root of the API
+                const response = await fetch('http://localhost/php/projet-pfe-hub-main/backend/public/api');
+                const data = await response.json();
+                output.innerHTML = '<p style="color: green">Success: ' + JSON.stringify(data) + '</p>';
+            } catch (error) {
+                console.error(error);
+                output.innerHTML = '<p style="color: red">Error: ' + error.message + '</p>';
+            }
+        }
+    </script>
+</body>
+</html>
